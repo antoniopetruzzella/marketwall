@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component"  method="upgrade">
+
+	<name>marketwall</name>
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>Settembre 2018</creationDate>
+	<author>Antonio Petruzzella</author>
+	<authorEmail>a.petruzzella71@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+	<version>1.0.0</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>Marketwall component</description>
+
+	<updateservers>
+		<server type="extension" element="com_marketwall" name="marketwall" priority="1">https://raw.githubusercontent.com/GGallery/com_gglms/master/gglmsupdate.xml</server>
+	</updateservers>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>marketwall.php</filename>
+		<filename>router.php</filename>
+		<filename>controller.php</filename>
+
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>language</folder>
+		<folder>libraries</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+
+	</files>
+
+	<administration>
+		<menu link='index.php?option=com_gglms'>GGlms!</menu>
+
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>marketwall.php</filename>
+			<filename>controller.php</filename>
+
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>images</folder>
+			<folder>jupload</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>sql</folder>
+
+		</files>
+	</administration>
+
+</extension>
